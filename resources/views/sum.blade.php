@@ -15,10 +15,10 @@
         justify-content: space-between;
     }
 </style>
-<body> 
-  
+<body style="width:404"> 
+  <h2> Tính tổng </h2>
 
-    <form action="" method="post">
+    <form  action="" method="post">
     @csrf 
      <div class="form-group">
        

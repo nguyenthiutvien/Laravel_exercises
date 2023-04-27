@@ -33,10 +33,10 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <h2> The result: {{$areaTriangle}} </h2>
-    </div>
+    <h2> The result{{$areaTriangle}} </h2>
+    </div>: 
     <div style="width: 404">
-    <h2> Area of Quadrangle </h2>
+    <h2> Perimeter of Quadrangle </h2>
     <form action ="" method ="post">
     @csrf
     <div class="form-group">
