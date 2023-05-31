@@ -56,3 +56,12 @@ Route::post('/create', [App\Http\Controllers\RoomController::class,'store'])->na
 // 
 
 Route::get('/master', [App\Http\Controllers\PageController::class,'getIndex']);
+
+Route::get('/database', function() {
+    Schema::create('products', function($pr) {
+        $pr->increments('id');
+        $pr->string('ten', 200);
+        
+    });
+    echo "da tao thanh cong";
+});
