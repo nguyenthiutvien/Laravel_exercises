@@ -4,11 +4,6 @@
             <div class="fullwidthbanner">
                 <div class="bannercontainer">
                     <div>
-                        
-
-                    
-
-
 
                     </div>
                     <div class="banner">
@@ -80,12 +75,12 @@
                                             </div>
                                             @endif
                                             <div class="single-item-header">
-                                                <a href="product.html"><img src="source/image/product/{{$new->image}}" alt=""></a>
+                                                <a href="chitiet_sanpham/{$new->id}}"><img src="source/image/product/{{$new->image}}" alt=""></a>
                                             </div>
                                             <div class="single-item-body">
                                                 <p class="single-item-title">{{$new-> name}}</p>
                                                 <p class="single-item-price">
-                                                    @if($new->promotion_price==0)
+                                                    @if($new->promotion_price==!0)
                                                     <span class="flash-sale">{{$new-> unit_price}} đồng</span>
                                                     @endif
                                                     <span class="flash-del">{{$new-> unit_price}} đồng</span>
@@ -102,9 +97,9 @@
                                     @endforeach
                                    
                                 </div>
-
+                                <div class ="row" >{{$new_product -> links()}} </div>
                             </div> <!-- .beta-products-list -->
-
+                          
                             <div class="space50">&nbsp;</div>
 
                             <div class="beta-products-list">

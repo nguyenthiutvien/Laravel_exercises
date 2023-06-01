@@ -55,8 +55,18 @@ Route::post('/create', [App\Http\Controllers\RoomController::class,'store'])->na
 
 // 
 
-Route::get('/master', [App\Http\Controllers\PageController::class,'getIndex']);
+Route::get('master', [App\Http\Controllers\PageController::class,'getIndex']);
 
+Route::get('type/{id}', [App\Http\Controllers\PageController::class,'getLoaiSp']);
+
+Route::get('loai-san-pham/{type}',[
+    'as'=> 'loaisanpham',
+    'uses'=> 'App\Http\Controllers\PageController@getLoaiSp']);
+
+    Route::get('loaisanpham/{type}', [App\Http\Controllers\PageController::class,'getLoaiSp']);
+    
+
+Route::get('/chitiet_sanpham/{id}', [App\Http\Controllers\PageController::class,'getChitiet']);
 Route::get('/database', function() {
     Schema::create('products', function($pr) {
         $pr->increments('id');
