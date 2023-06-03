@@ -36,34 +36,30 @@
 																			
 							<div class="row">												
 							@foreach($sp_theoloai as $sp)												
-								<div class="col-sm-4">											
-									<div class="single-item">										
-									@if($sp->promotion_price!=0)										
-									<div class ="ribbon-wrapper"><div class ="ribbon sale">i love you</div></div>										
-									@endif										
-										<div class="single-item-header">		
-											
-								
-											<a class="pull-left" href="product.html"><img src="source/image/product/{{$sp->image}}" alt=""></a>								
-										</div>									
-										<div class="single-item-body" style="font-size: 18px">									
-											<p class="single-item-title" >{{$sp->name}}</p>								
-											<p class="single-item-price">								
-												@if($sp->promotion_price==0)							
-												<span class="flash-sale">{{number_format($sp->unit_price)}}đồng</span>							
-											@else								
-												<span class="flash-del">{{number_format($sp->unit_price)}}đồng</span>							
-												<span class="flash-sale">{{number_format($sp->promotion_price)}}đồng</span>							
-											@endif								
-											</p>								
-										</div>									
-										<div class="single-item-caption">									
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i class="fa fa-shopping-cart"></i></a>								
-											<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>								
-											<div class="clearfix"></div>								
-										</div>									
-									</div>										
-								</div>											
+							<div class="col-sm-4">
+                                <div class="single-item">
+                                    <div class="single-item-header">
+                                        <a href="product.html"><img src="/source/image/product/{{$sp->image}}" alt=""></a>
+                                    </div>
+                                    <div class="single-item-body">
+                                        <p class="single-item-title">{{$sp->name}}</p>
+                                        <p class="single-item-price">
+                                            @if($sp->promotion_price==0)
+                                            <span class="flash-sale">{{number_format($sp-> unit_price)}} đồng</span>
+                                            @else
+                                            <span class="flash-del">{{number_format($sp-> unit_price)}} đồng</span>
+                                            <span class="flash-sale">{{number_format($sp-> promotion_price)}} đồng</span>
+                                            @endif
+                                        </p>
+                                    </div>
+                                    <div class="single-item-caption">
+                                        <a class="add-to-cart pull-left" href="shopping_cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="beta-btn primary" href="/chitiet_sanpham/{{$sp->id}}">Details <i class="fa fa-chevron-right"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            											
 							@endforeach												
 							</div>												
 																			
