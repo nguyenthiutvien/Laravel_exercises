@@ -7,7 +7,6 @@
     <h2>Edit product</h2>
   </div>
   <div class="space50">&nbsp;</div>
-  @include('error')
   <div class="container">
   <form action="/admin-edit" method="POST" enctype="multipart/form-data">
       @csrf
