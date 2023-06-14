@@ -21,16 +21,26 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 	});							
 								
 	// create api							
-	Route::get('/get-product',[App\Http\Controllers\ApiShoppeController::class,'getProducts']);							
+	// Route::get('/get-product',[App\Http\Controllers\ApiShoppeController::class,'getProduct1']);							
 								
 								
 								
-	Route::get('/get-product/{id}', [App\Http\Controllers\ApiShoppeController::class,'getOneProduct']);							
-	Route::post('/add-product',[App\Http\Controllers\ApiShoppeController::class,'addProduct']);
+	// Route::get('/get-product/{id}', [App\Http\Controllers\ApiShoppeController::class,'getOneProduct']);							
+	// Route::post('/add-product',[App\Http\Controllers\ApiShoppeController::class,'addProduct1']);
 								
-	Route::delete('/delete-product/{id}',[App\Http\Controllers\ApiShoppeController::class,'deleteProduct']);							
+	// Route::delete('/delete-product/{id}',[App\Http\Controllers\ApiShoppeController::class,'deleteProduct']);							
 		
-    Route::put('/edit-product/{id}', [App\Http\Controllers\ApiShoppeController::class, 'editProduct']);
+    // Route::put('/edit-product/{id}', [App\Http\Controllers\ApiShoppeController::class, 'editProduct']);
 				
 								
-	Route::post('/upload-image',[App\Http\Controllers\ApiShoppeController::class,'uploadImage']);							
+	// Route::post('/upload-image',[App\Http\Controllers\ApiShoppeController::class,'uploadImage']);							
+
+
+
+							
+
+//API PRODUCT1:
+
+Route::get('/getProduct_one',[App\Http\Controllers\ApiShoppeController::class,'getProduct1']);
+Route::post('/add-product_one',[App\Http\Controllers\ApiShoppeController::class,'addproduct1']);
+Route::post('/upload-image',[App\Http\Controllers\ApiShoppeController::class,'uploadImage']);	
